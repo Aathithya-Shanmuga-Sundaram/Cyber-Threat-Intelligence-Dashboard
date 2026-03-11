@@ -1573,11 +1573,11 @@ with tabs[4]:
             ioc_export['last_seen'] = pd.to_datetime(ioc_export['last_seen']).dt.strftime('%Y-%m-%d %H:%M:%S')
             
             st.download_button(
-                label="📥 Export",
+                label="📥 Export All",
                 data=ioc_export.to_csv(index=False),
                 file_name=f"iocs_filtered_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
                 mime="text/csv",
-                help="Export filtered IOCs",
+                help="Export All IOCs",
                 use_container_width=True
             )
     
@@ -1602,7 +1602,7 @@ with tabs[4]:
                     ioc_export['last_seen'] = pd.to_datetime(ioc_export['last_seen']).dt.strftime('%Y-%m-%d %H:%M:%S')
                 
                 st.download_button(
-                    label="📥 Export",
+                    label="📥 Export Filtered",
                     data=ioc_export.to_csv(index=False),
                     file_name=f"iocs_filtered_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
                     mime="text/csv",
